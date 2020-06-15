@@ -1,0 +1,24 @@
+* {margin:0; padding:0;}
+
+ul, li {list-style:none;}
+
+img {border:0;}
+
+#wrap {margin: 100px auto;
+        padding-left: 50px;
+        width: 640px;
+        float: left;
+}
+
+#nav li {float:left;}
+
+#nav img { width:70px;}
+
+#nav a{display:block;
+     border:2px solid #bbb;
+     margin:0 6px 10px 0;
+}
+
+#nav a.active {border:2px solid #fff;}
+
+#window {clear:both;}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/self-intro.css">
+</head>
+<body>
+    <section id="container">
+		<header id="logo">
+			<h1><a href="#">자기소개 page</a></h1>
+		</header>
+		<section id="menu">
+			<ul >
+				<li id="menu1"><a href="index.html">Homepage</a></li>
+				<li id="menu2"><a href="#">자기소개</a></li>
+				<li id="menu3"><a href="interests.html">관심사</a></li>
+				<li id="menu4"><a href="roadmap.html">개발자 로드맵</a></li>
+				<li id="menu5"><a href="sign-up-for-membership.html">로그인</a></li>
+			</ul>
+		</section>
+	</section>
+    
+    <section id="note">
+        <div class="wrap" id="myintro">
+
+            <div class="type">
+                <div class="title">Profile</div>
+                <div class="img">
+                    <img src="images/title_picture.jpg" alt="" height= "300px">
+                </div>
+                <div class="like">
+                    <img src="images/heart.png" alt="" height="30px" class="btnHeart">
+                </div>
+                <div class="content">
+                    <p class="right move">이름 : 김승연</p>
+                    <p class="move">나이 : 25세</p>
+                    <p class="right move">특징 : 집사</p> 
+                </div>
+            </div>
+
+            <div class="type">
+                <div class="title">Like</div>
+                <div class="img">
+                    <div class="img-container">
+                        <img src="images/like/파란장미.jpg" style="height:300px;" id="img-tour">
+                    </div>
+                </div>
+                <div class="like">
+                    <img src="images/heart.png" alt="" height="30px" class="btnHeart">
+                </div>
+                <div class="content">
+                    <p class="move">파란색, 블랙&화이트</p>
+                    <p class="right move">고양이, 여우, 거의 동물 모두!</p>
+                    <p class="move">콜라, 치킨, 커피</p>
+                </div>
+            </div>
+
+            <div class="type">
+                <div class="title">Dislike</div>
+                <div class="img">
+                    <div class="img-container">
+                        <img src="images/dislike/비와고양이.jpg" style="height:300px;" id="img-tour2">
+                    </div>
+                </div>
+                <div class="like">
+                    <img src="images/heart.png" alt="" height="30px" class="btnHeart" id="3">
+                </div>
+                <div class="content">
+                    <p class="right move">비오는 날 밖에 나가기</p>
+                    <p class="move">엄청 매운 음식, 날것(회, 간장게장)</p>
+                    <p class="right move">모기, 바퀴벌레</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="footer">
+       
+        <div class="fbox1">
+            <span>
+                서울 강남구 테헤란로 10길 9
+                <br>KH정보교육원 강남지원2관
+            </span>
+        </div>
+        <div class="fbox1">
+            <span>
+                Telephone: 02-1234-1234
+            </span>
+        </div>
+        <div class="fbox1">
+            <span>
+                kh정보교육@naver.com
+            </span>
+        </div>
+        
+    </footer>
+
+    <script>
+        var index = 0;
+        var imgsrc = ["images/like/파란장미.jpg","images/like/단풍이.jpg","images/like/커피.jpg","images/like/치킨.png"];
+        $(function(){
+            $("#img-tour").click(function(){
+                let style = {
+                    left: "-400px"
+                };
+                $(this).animate(style, 500, function(){
+                index++;
+                if(index >= 4){
+                    index=0;
+                }
+                
+                $("#img-tour").attr('src', imgsrc[index]);
+                $(this).css("left", "400px")
+                .animate({left:"0px"},500);
+            });
+        });
+    });
+    
+        var index2 = 0;
+        var imgsrc2 = ["images/dislike/비와고양이.jpg","images/dislike/불닭.jpg","images/dislike/간장게장.png","images/dislike/바선생.jpg"];
+        $(function(){
+          $("#img-tour2").click(function(){
+            let style = {
+              left: "-400px"
+            };
+            $(this).animate(style, 500, function(){
+                index2++;
+                if(index2 >= 4){
+                    index2=0;
+                }
+
+                $("#img-tour2").attr('src', imgsrc2[index2]);
+                $(this).css("left", "400px")
+                     .animate({left:"0px"},500);
+            });
+          });
+        });
+    </script>
+</body>
+</html>

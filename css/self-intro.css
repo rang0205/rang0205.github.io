@@ -1,0 +1,75 @@
+.wrap, .type, .img{
+    border : 1px solid lightgray;
+    display: block;
+    padding: 5px;
+    margin: auto auto;
+    color: gray;
+    position: relative;
+}
+
+.type {
+  width: 450px;
+  height: 500px;
+  margin-top: 30px;
+}
+
+.title {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.img {
+    height: 300px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.like {
+    margin: 10px;
+}
+
+.content p {
+    font-size: 14px;
+}
+.right {
+    transform: translateX(350px);
+  }
+
+.content:hover .move {
+  animation-name: my-ani;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes my-ani {
+  /* 0% {
+  } */
+  25% {
+    transform: translate(100px, 0);
+    
+  }
+  50% {
+    transform: translate(200px, 0);
+  }
+  75% {
+    transform: translate(300px, 0);
+  }
+  100% {
+    transform: translate(400, 0);
+  }
+}
+
+.img-container {
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.img-container img{
+  position: relative;
+  /* width: 150px;
+  height: 100px; */
+}

@@ -1,0 +1,168 @@
+#note {
+    font-family: sans-serif;
+     
+    height: 400px;
+    background-color: #323B55;
+    position: relative;
+    background-image: -webkit-linear-gradient(bottom, #323B55 0%, #424F71 100%);
+    background-image: -moz-linear-gradient(bottom, #323B55 0%, #424F71 100%);
+    background-image: -o-linear-gradient(bottom, #323B55 0%, #424F71 100%);
+    background-image: -ms-linear-gradient(bottom, #323B55 0%, #424F71 100%);
+    background-image: linear-gradient(bottom, #323B55 0%, #424F71 100%);
+}
+
+#login {
+    width: 220px;
+    height: 155px;
+    position: absolute;
+    left: 33%;
+    top: 50%;
+    margin-left: -110px;
+    margin-top: -75px;
+}
+
+#login input[type="text"],#login input[type="password"] {
+    width: 225px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .49);
+ 
+    padding-left: 20px;
+     
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    border-radius: 6px;
+ 
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #F2F2F2 100%);
+    background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #F2F2F2 100%);
+    background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #F2F2F2 100%);
+    background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #F2F2F2 100%);
+    background-image: linear-gradient(bottom, #FFFFFF 0%, #F2F2F2 100%);
+ 
+    -webkit-box-shadow: inset 0px 2px 0px #d9d9d9;
+    box-shadow: inset 0px 2px 0px #d9d9d9;
+ 
+}
+ 
+#login input[type="text"]:focus,#login input[type="password"]:focus {
+    -webkit-box-shadow: inset 5px 5px 0px #a7a7a7;
+    box-shadow: inset 0px 2px 0px #a7a7a7;
+}
+
+#login input[type="submit"] {
+    width: 250px;
+    height: 50px;
+    margin-top: 7px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0px -1px 0px #5b6ddc;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .49);
+ 
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    border-radius: 6px;
+ 
+    background-color: #5466da;
+    background-image: -webkit-linear-gradient(bottom, #5466da 0%, #768ee4 100%);
+    background-image: -moz-linear-gradient(bottom, #5466da 0%, #768ee4 100%);
+    background-image: -o-linear-gradient(bottom, #5466da 0%, #768ee4 100%);
+    background-image: -ms-linear-gradient(bottom, #5466da 0%, #768ee4 100%);
+    background-image: linear-gradient(bottom, #5466da 0%, #768ee4 100%);
+ 
+    cursor: pointer;
+     
+    -webkit-box-shadow: inset 0px 1px 0px #9ab1ec;
+    box-shadow: inset 0px 1px 0px #9ab1ec;
+ 
+}
+ 
+#input[type="submit"]:hover {
+    background-color: #5f73e9;
+    background-image: -webkit-linear-gradient(bottom, #5f73e9 0%, #859bef 100%);
+    background-image: -moz-linear-gradient(bottom, #5f73e9 0%, #859bef 100%);
+    background-image: -o-linear-gradient(bottom, #5f73e9 0%, #859bef 100%);
+    background-image: -ms-linear-gradient(bottom, #5f73e9 0%, #859bef 100%);
+    background-image: linear-gradient(bottom, #5f73e9 0%, #859bef 100%);
+ 
+    -webkit-box-shadow: inset 0px 1px 0px #aab9f4;
+    box-shadow: inset 0px 1px 0px #aab9f4;
+     
+    margin-top: 10px;
+}
+ 
+#login input[type="submit"]:active {
+    background-color: #7588e1;
+    background-image: -webkit-linear-gradient(bottom, #7588e1 0%, #7184df 100%);
+    background-image: -moz-linear-gradient(bottom, #7588e1 0%, #7184df 100%);
+    background-image: -o-linear-gradient(bottom, #7588e1 0%, #7184df 100%);
+    background-image: -ms-linear-gradient(bottom, #7588e1 0%, #7184df 100%);
+    background-image: linear-gradient(bottom, #7588e1 0%, #7184df 100%);
+ 
+    -webkit-box-shadow: inset 0px 1px 0px #93a9e9;
+    box-shadow: inset 0px 1px 0px #93a9e9;
+}
+
+#login label {
+    display: none;
+}
+
+.placeholder {
+    color: #444;
+}
+
+/*********************************************************************************/
+/* SideInfo                                                                    */
+/*********************************************************************************/
+
+#sideinfo {
+    margin: 20px;
+    padding: 30px;
+}
+
+#sideinfo input[type=text], #sideinfo input[type=password] {
+    padding: 5px 10px; /* 상하 우좌 */
+    margin: 7px 0; /* 상하 우좌 */
+    font-family: inherit; /* 폰트 상속 */
+    border: 1px solid #ccc; /* 999가 약간 더 진한 색 */
+    font-size:14pt;
+    box-sizing: border-box;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#sideinfo input[type=text]:focus, #sideinfo input[type=password]:focus {
+    border: 2px solid #555;
+}
+
+#sideinfo input[type=submit]{
+    margin-top: 10px;
+    width:100px;
+    height:40px;
+    line-height: 22px;
+    padding: 5px, 10px; /* 상하 우좌 */
+    background: #E6E6E6;
+    color: #000000;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+#sideinfo input[type=submit]:hover {
+    background-color: #FFBF00;
+}

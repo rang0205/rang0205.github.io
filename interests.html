@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관심사</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rang.css">
+</head>
+<body>
+    <section id="container">
+		<header id="logo">
+			<h1><a href="#">김촐랑</a></h1>
+		</header>
+		<section id="menu">
+			<ul>
+				<li id="menu1"><a href="index.html">Homepage</a></li>
+				<li id="menu2"><a href="self-introduction.html">자기소개</a></li>
+				<li id="menu3"><a href="#">관심사</a></li>
+				<li id="menu4"><a href="roadmap.html">개발자 로드맵</a></li>
+				<li id="menu5"><a href="sign-up-for-membership.html">로그인</a></li>
+			</ul>
+		</section>
+	</section>
+    
+    <section id="note">
+        <div id="wrap">
+            <ul id="nav">
+                <li><a href="images/rang1.jpg" class="active"><img src="images/rang1.jpg" alt="" width="300px" height="50px"></a></li>
+                <li><a href="images/rang2.jpg"><img src="images/rang2.jpg" alt="" width="300px" height="50px"></a></li>
+                <li><a href="images/rang3.jpg"><img src="images/rang3.jpg" alt="" width="300px" height="50px"></a></li>
+                <li><a href="images/rang4.jpg"><img src="images/rang4.jpg" alt="" width="300px" height="50px"></a></li>
+                <li><a href="images/rang5.jpg"><img src="images/rang5.jpg" alt="" width="300px" height="50px"></a></li>
+                <li><a href="images/rang6.jpg"><img src="images/rang6.jpg" alt="" width="300px" height="50px"></a></li>
+            </ul>
+            <div id="window"><img src="images/rang1.jpg" alt="" width="500px"></div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#nav a').mouseover(function(e){
+                    e.preventDefault();
+                    $('#nav a').removeClass('active');
+                    $(this).addClass('active');
+                    img_url = $(this).attr('href');
+                    $('#window img').attr('src',img_url);
+                    });
+                })
+        </script>
+
+        <div class="memo">
+            <h2>방명록관리</h2>
+            <form action="javascript:saveEntry();">
+            <input type="text" id="guest">
+            <input type="text" id="memo">
+            <input type="submit" value="저장">
+            </form>
+        </div>
+        <table id="tbl-guestBook"></table>
+        <style>
+            .memo {
+                margin-top: 100px;
+            }
+
+            table, th, td {
+            margin-top: 20px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+            } 
+        </style>
+        <script>
+            $(function(){
+            getGuestBook();
+            });
+
+            function saveEntry(){
+            let entry = {
+                guest: $("#guest").val(),
+                memo: $("#memo").val(),
+                date: Date.now()
+            }
+            console.log(entry);
+
+            let guestBook = JSON.parse(localStorage.getItem("guestBook"));
+            //첫 방문록 작성시
+            if(guestBook == null) 
+                guestBook = [];
+
+            guestBook.push(entry);
+
+            console.log(guestBook);
+
+            localStorage.setItem("guestBook", JSON.stringify(guestBook));
+            
+            $("#guest, #memo").val('');
+            getGuestBook();
+
+            }
+
+            function getGuestBook(){
+            let header = "<tr><th>글쓴이</th><th>메모</th><th>작성일</th></tr>";
+            $("#tbl-guestBook").html(header);
+
+            let guestBook = JSON.parse(localStorage.getItem("guestBook"));
+            $(guestBook).each(function(i, entry){
+                let d = new Date(entry.date);
+                let html = "<tr>"
+                        + "<td>" + entry.guest + "</td>"
+                        + "<td>" + entry.memo + "</td>"
+                        + "<td>" + d.getMonth() + "/" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes() + "</td>"
+                        + "</tr>";
+                $("#tbl-guestBook").append(html);
+
+            })
+            }
+        </script>
+    </section>
+
+    <footer id="footer">
+       
+        <div class="fbox1">
+            <span>
+                서울 강남구 테헤란로 10길 9
+                <br>KH정보교육원 강남지원2관
+            </span>
+        </div>
+        <div class="fbox1">
+            <span>
+                Telephone: 02-1234-1234
+            </span>
+        </div>
+        <div class="fbox1">
+            <span>
+                kh정보교육@naver.com
+            </span>
+        </div>
+        
+    </footer>
+
+</body>
+</html>
